@@ -1,11 +1,16 @@
 class Task
   @@all_tasks = []
-  define_method(:initialize) do |description|
+  define_method(:initialize) do |description, type|
     @description = description
+    @type = type
   end
 
   define_method(:description) do
     @description
+  end
+
+  define_method(:type) do
+    @type
   end
 
   define_singleton_method(:all) do
